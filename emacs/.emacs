@@ -2,7 +2,7 @@
 (defun get-custom-file-location ()
   (cond
    ((eq system-type 'windows-nt) "C:\\Users\\cooll\\AppData\\Roaming\\emacscustom.el")
-   ((eq system-type 'gnu/linux) "~/dotfiles/emacs/emacs.custom.el")))
+   ((eq system-type 'gnu/linux) "~/.emacs.custom.el")))
 (setq custom-file (get-custom-file-location))
 (load-file custom-file)
 
