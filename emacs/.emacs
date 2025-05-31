@@ -59,32 +59,6 @@
 ;; and `package-pinned-packages`. Most users will not need or want to do this.
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
-
-;org-roam
-(defun get-notes-location ()
-  (cond
-   ((eq system-type 'windows-nt) "C:\\Users\\cooll\\Desktop\\notes")
-   ((eq system-type 'gnu/linux) "~/notes")))
-
-(use-package org-roam
-  :ensure t
-  :init
-  (setq org-roam-v2-ack t)
-  (setq org-return-follows-link t)
-  (setf (cdr (assoc 'file org-link-frame-setup)) 'find-file)
-  (setq org-support-shift-select 1)
-  :custom
-  (org-roam-directory (get-notes-location))
-  (org-roam-completion-everywhere t)
-  :bind (("C-c n l" . org-roam-buffer-toggle)
-         ("C-c n f" . org-roam-node-find)
-         ("C-c n i" . org-roam-node-insert)
-         :map org-mode-map
-         ("C-M-i"    . completion-at-point))
-  :config
-  (org-roam-setup))
-
-
 ;multiple cursors
 (use-package multiple-cursors
   :ensure t)
