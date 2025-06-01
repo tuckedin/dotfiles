@@ -2,7 +2,7 @@
 (defun get-custom-file-location ()
   (cond
    ((eq system-type 'windows-nt) "C:\\Users\\cooll\\AppData\\Roaming\\emacscustom.el")
-   ((eq system-type 'gnu/linux) "~/.emacs.custom.el")))
+   ((eq system-type 'gnu/linux) "~/.emacscustom.el")))
 (setq custom-file (get-custom-file-location))
 (load-file custom-file)
 
@@ -68,6 +68,3 @@
 (global-set-key (kbd "C-c C-<")     'mc/mark-all-like-this)
 (global-set-key (kbd "C-\"")        'mc/skip-to-next-like-this)
 (global-set-key (kbd "C-:")         'mc/skip-to-previous-like-this)
-
-
-(package-initialize)
