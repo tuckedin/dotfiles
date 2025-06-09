@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Comic Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "ComicMonoNF:pixelsize=12:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
